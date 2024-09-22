@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Carbon Footprint Calculator</h1>
+        <p>Estimate your carbon emissions and discover eco-friendly tips!</p>
+    </header>
+    
+    
+    <section>
+        <h2>Track Your Daily Purchases</h2>
+        <form id="purchase-form">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="groceries">Groceries</option>
+                <option value="electronics">Electronics</option>
+                <option value="transport">Transport</option>
+                <option value="fuel">Fuel</option>
+                <option value="flights">Flights</option>
+            </select>
+
+            <label for="amount">Amount Spent:</label>
+            <input type="number" id="amount" name="amount" min = 0 required>
+
+            <!--<label for="unit">Unit:</label>
+            <select id="unit" name="unit" required>
+                <option value="dollars">Dollars (for groceries, electronics)</option>
+                <option value="miles">Miles (for transport and flights)</option>
+                <option value="gallons">Gallons (for fuel)</option>
+            </select>-->
+
+            <button type="submit">Calculate Carbon Footprint</button>
+        </form>
+    </section>
+    
+    <section id="results">
+        <h2>Your Estimated Carbon Footprint</h2>
+        <p id="carbon-result">Enter your purchases to calculate the carbon footprint.</p>
+    </section>
+
+    <section id="total-results">
+        <h2>Your Total Carbon Footprint</h2>
+        <p id="total-carbon-result">Your total carbon footprint will be shown here.</p>
+    </section>
+
+    <section id="savings">
+        <h2>Eco-Friendly Tips</h2>
+        <!--<button id="view-tips-button">View All Tips</button>-->
+        <div id="all-tips" style="display:block;">
+            <p id="savings-tips"></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

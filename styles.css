@@ -1,0 +1,198 @@
+/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url("Leaf Normal Select.cur"),auto;
+    font-family: Montserrat, sans-serif;
+}
+
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    cursor: url("Leaf Normal Select.cur"),auto;
+}
+
+
+/* Header */
+/*header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 100%;
+}
+
+header h1 {
+    font-size: 2rem;
+}*/
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50; /* Main background color */
+    color: white; /* Text color */
+    margin-bottom: 30px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Larger font size for the title */
+    margin-bottom: 10px; /* Space below the title */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 1px; /* Space between letters */
+}
+
+header p {
+    font-size: 1.2rem; /* Subheading font size */
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    margin-top: 5px; /* Space above the paragraph */
+}
+
+
+/* Form Section */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Results Section */
+#results, #total-results {
+    text-align: center;
+    background-color: #e7f4ea;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#results p, #total-results p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+#carbon-result, #total-carbon-result {
+    font-weight: bold;
+    color: #333;
+    opacity: 0; /* Start invisible */
+    transform: scale(0.95); /* Start slightly smaller */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animation on opacity and scale */
+}
+
+/* Tips Section (Grid Style) */
+#savings-tips {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make it take the full width */
+    margin: 20px 0; /* Center with vertical margin */
+    text-align: center;
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+}
+
+
+
+#savings-tips p.show {
+    opacity: 1;
+    transform: scale(1); /* Make the element fully visible and its scale to normal */
+}
+
+#savings-tips p {
+    background-color: #f0f0f0; /* Original background color */
+    padding: 15px;
+    border-radius: 8px;
+    margin: 0; /* Remove margin for grid items */
+    font-size: 1.2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.3s ease; /* Include background-color in transition */
+}
+
+/* Hover effect for tip boxes */
+#savings-tips p:hover {
+    background-color: #e0e0e0; /* Slightly darker shade on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+#total-carbon-result {
+    font-weight: bold;
+    color: #333;
+    opacity: 0; /* Start invisible */
+    transform: scale(0.95); /* Start slightly smaller */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Animation on opacity and scale */
+}
+
+#total-carbon-result.show {
+    opacity: 1; /* Fully visible */
+    transform: scale(1); /* Normal size */
+}
+
